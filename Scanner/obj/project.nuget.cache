@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vJBN++dnzmY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\oiqmc\\OneDrive\\Documents\\Projects\\vrchat\\mods\\Scanner\\Scanner\\Scanner.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\oiqmc\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\oiqmc\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\oiqmc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

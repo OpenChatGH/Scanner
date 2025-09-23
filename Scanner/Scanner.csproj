@@ -1,0 +1,465 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>Scanner</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>Scanner</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAVProVideo.Extensions.Timeline">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppAVProVideo.Extensions.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAVProVideo.Extensions.UnityUI">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppAVProVideo.Extensions.UnityUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAVProVideo.Extensions.VisualEffectGraph">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppAVProVideo.Extensions.VisualEffectGraph.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAVProVideo.Runtime">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppAVProVideo.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBeeByteObfuscator">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppBeeByteObfuscator.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBlobHandles.Runtime">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppBlobHandles.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCinemachine">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppCinemachine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppclipper_library">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2Cppclipper_library.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCollections.Pooled">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppCollections.Pooled.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDataModel">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppDataModel.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTween">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppDOTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTween.Modules">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppDOTween.Modules.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFacepunch.Steamworks.Win64">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppFacepunch.Steamworks.Win64.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMono.Security">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppMono.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppnetstandard">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2Cppnetstandard.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.Platform">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppOculus.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOculus.VR">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppOculus.VR.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOscCore.Runtime">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppOscCore.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPhoton-DotNet">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppPhoton-DotNet.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppShapesRuntime">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppShapesRuntime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSigtrap.VrTunnellingPro">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSigtrap.VrTunnellingPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Buffers">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Buffers.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Collections.Immutable">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Collections.Immutable.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Configuration">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Core">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Diagnostics.StackTrace">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Diagnostics.StackTrace.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Globalization.Extensions">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Globalization.Extensions.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.IO.Compression">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.IO.Compression.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Memory">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Memory.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Numerics.Vectors">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Numerics.Vectors.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.CompilerServices.Unsafe">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Runtime.CompilerServices.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.Serialization">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Threading.Tasks.Extensions">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Threading.Tasks.Extensions.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.ValueTuple">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.ValueTuple.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml.Linq">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTransmtn">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppTransmtn.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUniTask.Addressables">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppUniTask.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUniTask">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppUniTask.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUniTask.DOTween">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppUniTask.DOTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUniTask.Linq">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppUniTask.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUniTask.TextMeshPro">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppUniTask.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Collections">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Collections.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Dynamics">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Dynamics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.SDK3.Dynamics.Contact">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.SDK3.Dynamics.Contact.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.SDK3.Dynamics.PhysBone">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.SDK3.Dynamics.PhysBone.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.SDKBase.Editor.BuildPipeline">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.SDKBase.Editor.BuildPipeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.ClientBindings">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.ClientBindings.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.Common">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.Security">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.Serialization.AOT">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.Serialization.AOT.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.Serialization.OdinSerializer">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.Serialization.OdinSerializer.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.VM">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.VM.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.VRCWrapperModules">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.VRCWrapperModules.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Udon.Wrapper">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Udon.Wrapper.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.UI.Core">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.UI.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.UI.Elements">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.UI.Elements.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.UI.Shared">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.UI.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRC.Utility">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRC.Utility.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRCCore-Editor">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRCCore-Editor.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRCCore-Standalone">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRCCore-Standalone.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRCLog">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRCLog.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRCSDK2">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRCSDK2.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRCSDK3">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRCSDK3.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRCSDK3A">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRCSDK3A.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVRCSDKBase">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2CppVRCSDKBase.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppwebsocket-sharp">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Il2Cppwebsocket-sharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Postprocessing.Runtime">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ProfilerModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UNETModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UNETModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\net6\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\net6\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Runtime">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Common">
+			<HintPath>C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Core.cs" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\content\app_438100\2022\Mods&quot;" />
+	</Target>
+</Project>
