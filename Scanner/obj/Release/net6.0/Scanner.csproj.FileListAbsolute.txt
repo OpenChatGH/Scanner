@@ -178,3 +178,4 @@ C:\Users\oiqmc\OneDrive\Documents\Projects\vrchat\mods\Scanner\Scanner\obj\Relea
 C:\Users\oiqmc\OneDrive\Documents\Projects\vrchat\mods\Scanner\Scanner\obj\Release\net6.0\refint\Scanner.dll
 C:\Users\oiqmc\OneDrive\Documents\Projects\vrchat\mods\Scanner\Scanner\obj\Release\net6.0\Scanner.pdb
 C:\Users\oiqmc\OneDrive\Documents\Projects\vrchat\mods\Scanner\Scanner\obj\Release\net6.0\ref\Scanner.dll
+C:\Users\oiqmc\OneDrive\Documents\Projects\vrchat\mods\Scanner\Scanner\obj\Release\net6.0\Scanner.sourcelink.json

@@ -10,7 +10,7 @@ All you do is throw it into your `VRChat/Mods` folder and run it to connect to a
 ### Using a custom API URL.
 You can use a custom API URL by typing in the following command:
 ```
-VRChat.exe --forceUrl="http://your-url.here/api/1"
+VRChat.exe --forceUrl=http://your-url.here/api/1
 ```
 
 ## Building
