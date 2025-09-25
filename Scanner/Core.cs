@@ -1,6 +1,11 @@
 ﻿using MelonLoader;
 using HarmonyLib;
 using Il2CppBestHTTP;
+using Il2CppExitGames.Client.Photon;
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
+using System.Runtime.InteropServices;
+using UnityEngine;
+using System.Reflection;
 
 [assembly: MelonInfo(typeof(Scanner.Core), "Scanner", "1.2.0", "ehko", null)]
 [assembly: MelonGame("VRChat", "VRChat")]
@@ -9,7 +14,8 @@ namespace Scanner
 {
     public class Core : MelonMod
     {
-        public static string BaseUrl = "http://127.0.0.1:3000";
+        public static string BaseUrl = "http://localhost:3000";
+        public static Il2CppSystem.String BasePhotonId = "dcbf2ef8-9d04-4538-a4e3-4a1647e6aea0";
 
         public override void OnApplicationStart()
         {
@@ -24,6 +30,12 @@ namespace Scanner
                     {
                         BaseUrl = a.Substring("--forceUrl=".Length);
                         MelonLogger.Msg($"[Scanner] Using forced BaseUrl (from --forceUrl=): {BaseUrl}");
+                        break;
+                    }
+                    else if (a.StartsWith("--forcePhotonId=", StringComparison.OrdinalIgnoreCase))
+                    {
+                        BasePhotonId = a.Substring("--forcePhotonId=".Length);
+                        MelonLogger.Msg($"[Scanner] Using forced BasePhotonId (from --forcePhotonId=): {BasePhotonId}");
                         break;
                     }
                 }
@@ -58,8 +70,45 @@ namespace Scanner
                 Il2CppSystem.UriBuilder newURI = new Il2CppSystem.UriBuilder(uri);
 
                 request.Uri = newURI.Uri;
-                MelonLogger.Msg($"[HTTPManager] patched to: {uri}");
                 return true;
+            }
+        }
+
+        [HarmonyPatch]
+        static class LogSerializeOperationToMessage
+        {
+            static System.Reflection.MethodBase TargetMethod()
+            {
+                return typeof(PeerBase).GetMethod(
+                    "SerializeOperationToMessage",
+                    new Type[] { typeof(byte), typeof(Il2CppSystem.Collections.Generic.Dictionary<byte, Il2CppSystem.Object>), typeof(EgMessageType), typeof(bool) });
+            }
+
+            public static bool Prefix(byte opCode, Il2CppSystem.Collections.Generic.Dictionary<byte, Il2CppSystem.Object> parameters, EgMessageType messageType, bool encrypt)
+            {
+                MelonLogger.Msg($"[PhotonSeralize] <Systems-Diction> {opCode} | {parameters} | {messageType} | {encrypt}");
+                if(opCode == 220 && parameters != null) {
+                    byte appIdKey = 224;
+
+                    parameters[appIdKey] = (Il2CppSystem.Object)BasePhotonId;
+                } else if (opCode == 230 && parameters != null)
+                {
+                    byte appIdKey = 224;
+
+                    parameters[appIdKey] = (Il2CppSystem.Object)BasePhotonId;
+                }
+                return true;
+            }
+
+            public static void Postfix(byte opCode, Il2CppSystem.Collections.Generic.Dictionary<byte, Il2CppSystem.Object> parameters, EgMessageType messageType, bool encrypt)
+            {
+                DumpAll(parameters);
+            }
+
+            static void DumpAll(Il2CppSystem.Collections.Generic.Dictionary<byte, Il2CppSystem.Object> dict)
+            {
+                foreach (var kv in dict)
+                    MelonLogger.Msg($"[AuthParam] {kv.Key} = {kv.Value}");
             }
         }
     }
