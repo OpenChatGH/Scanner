@@ -2,10 +2,13 @@
 using HarmonyLib;
 using Il2CppBestHTTP;
 using Il2CppExitGames.Client.Photon;
+using VRCApplicationSetup = Il2Cpp.MonoBehaviourPublicStInStBoSiGaStSiBoInUnique;
+using RoomManagerBase = Il2Cpp.MonoBehaviourPublicBoApDiApBo2InBoObSiUnique;
+using VRCFlowManagerVRC = Il2Cpp.MonoBehaviour1PublicAc1BoSiBoObSiStUnique;
+using Il2CppVRC.Core;
+using Il2Cpp;
 using Il2CppInterop.Runtime.InteropTypes.Arrays;
 using System.Runtime.InteropServices;
-using UnityEngine;
-using System.Reflection;
 
 [assembly: MelonInfo(typeof(Scanner.Core), "Scanner", "1.2.0", "ehko", null)]
 [assembly: MelonGame("VRChat", "VRChat")]
@@ -15,11 +18,11 @@ namespace Scanner
     public class Core : MelonMod
     {
         public static string BaseUrl = "http://localhost:3000";
-        public static Il2CppSystem.String BasePhotonId = "dcbf2ef8-9d04-4538-a4e3-4a1647e6aea0";
+        public static string BaseWsUrl = "ws://localhost:8081";
+        public static Il2CppSystem.String BasePhotonId = "71a8eff8-f792-4973-bc3d-774b25f0a59a";
 
-        public override void OnApplicationStart()
+        public override void OnInitializeMelon()
         {
-            // Handle --forceUrl command line argument
             try
             {
                 var args = Environment.GetCommandLineArgs();
@@ -47,6 +50,8 @@ namespace Scanner
 
             var harmony = new HarmonyLib.Harmony("ehko.scanner");
             harmony.PatchAll();
+
+            
 
             MelonLogger.Msg("[Scanner] Patches applied. BaseUrl = " + BaseUrl);
         }
@@ -86,30 +91,25 @@ namespace Scanner
 
             public static bool Prefix(byte opCode, Il2CppSystem.Collections.Generic.Dictionary<byte, Il2CppSystem.Object> parameters, EgMessageType messageType, bool encrypt)
             {
-                MelonLogger.Msg($"[PhotonSeralize] <Systems-Diction> {opCode} | {parameters} | {messageType} | {encrypt}");
-                if(opCode == 220 && parameters != null) {
-                    byte appIdKey = 224;
-
-                    parameters[appIdKey] = (Il2CppSystem.Object)BasePhotonId;
-                } else if (opCode == 230 && parameters != null)
+                if (opCode == 220 && parameters != null)
                 {
                     byte appIdKey = 224;
 
                     parameters[appIdKey] = (Il2CppSystem.Object)BasePhotonId;
                 }
+                else if (opCode == 230 && parameters != null)
+                {
+                    byte appIdKey = 224;
+                    byte secret = 221;
+
+                    if (!parameters.ContainsKey(secret))
+                    {
+                        parameters[appIdKey] = (Il2CppSystem.Object)BasePhotonId;
+                    }
+                }
                 return true;
             }
 
-            public static void Postfix(byte opCode, Il2CppSystem.Collections.Generic.Dictionary<byte, Il2CppSystem.Object> parameters, EgMessageType messageType, bool encrypt)
-            {
-                DumpAll(parameters);
-            }
-
-            static void DumpAll(Il2CppSystem.Collections.Generic.Dictionary<byte, Il2CppSystem.Object> dict)
-            {
-                foreach (var kv in dict)
-                    MelonLogger.Msg($"[AuthParam] {kv.Key} = {kv.Value}");
-            }
         }
     }
 }
